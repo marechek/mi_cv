@@ -16,7 +16,11 @@ Mi CV
 
             <div class="profile-section text-center">
 
+                {% if profile.foto %}
                 <img src="{{ profile.foto.url }}" class="profile-img">
+                {% else %}
+                <img src="https://via.placeholder.com/180" class="profile-img">
+                {% endif %}
 
                 <p class="profile-title">{{ profile.titulo }}</p>
 
