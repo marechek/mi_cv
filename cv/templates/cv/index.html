@@ -6,11 +6,119 @@ Mi CV
 
 {% block content %}
 
-<div class="container mt-5">
+<div class="container-fluid cv-container">
 
-    <h1>Mi CV</h1>
+    <div class="row">
 
-    <p>Proyecto Django funcionando correctamente.</p>
+        <!-- COLUMNA IZQUIERDA -->
+
+        <div class="col-md-5 left-column">
+
+            <div class="profile-section text-center">
+
+                <img src="https://via.placeholder.com/180" class="profile-img">
+
+                <h2 class="profile-name">Tu Nombre</h2>
+
+                <p class="profile-title">Profesión</p>
+
+            </div>
+
+            <div class="section">
+
+                <h4>Contacto</h4>
+
+                <p><i class="bi bi-envelope"></i> email@email.com</p>
+
+                <p><i class="bi bi-phone"></i> +56 9 0000 0000</p>
+
+                <p><i class="bi bi-globe"></i> website.com</p>
+
+            </div>
+
+            <div class="section">
+
+                <h4>Habilidades</h4>
+
+                <ul>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>SQL</li>
+                    <li>Gestión de Proyectos</li>
+                </ul>
+
+            </div>
+
+            <div class="section">
+
+                <h4>Idiomas</h4>
+
+                <div class="progress mb-2">
+                    <div class="progress-bar" style="width:90%">Español</div>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:70%">Inglés</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COLUMNA DERECHA -->
+
+        <div class="col-md-7 right-column">
+
+            <div class="header-name">
+
+                <h1>Tu Nombre Completo</h1>
+
+            </div>
+
+            <div class="section">
+
+                <h3>Experiencia Laboral</h3>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <h5>Cargo</h5>
+
+                        <p>Empresa | 2020 - Presente</p>
+
+                        <p>Descripción breve del rol.</p>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <h5>Cargo anterior</h5>
+
+                        <p>Empresa | 2018 - 2020</p>
+
+                        <p>Descripción breve del rol.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section">
+
+                <h3>Educación</h3>
+
+                <p>Título profesional</p>
+
+                <p>Universidad</p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
