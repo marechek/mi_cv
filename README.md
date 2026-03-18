@@ -151,13 +151,13 @@ Todos estos problemas los fui resolviendo haciendo ajustes en el CSS, en los tem
 ## 📸 Capturas
 
 ### Vista principal
-![Vista principal](static\img\CV_navegador.png "Vista Principal")
+![Vista principal](static/img/CV_navegador.png "Vista Principal")
 
 ### Panel admin
-![Panel admin](static\img\Admin.png "Panel Admin")
+![Panel admin](static/img/Admin.png "Panel Admin")
 
 ### Código
-![Código](static\img\Codigo.png "Código")
+![Código](static/img/Codigo.png "Código")
 
 ---
 
