@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load static %}
 {% block title %}
 Mi CV
 {% endblock %}
@@ -12,14 +13,14 @@ Mi CV
 
         <!-- COLUMNA IZQUIERDA -->
 
-        <div class="col-lg-4 col-md-5 left-column">
+        <div class="col-lg-3 col-md-4 left-column">
 
             <div class="profile-section text-center">
 
                 {% if profile.foto %}
                 <img src="{{ profile.foto.url }}" class="profile-img">
                 {% else %}
-                <img src="https://via.placeholder.com/180" class="profile-img">
+                <img src="{% static 'img/placeholder.png' %}" class="profile-img">
                 {% endif %}
 
                 <p class="profile-title">{{ profile.titulo }}</p>
@@ -38,19 +39,25 @@ Mi CV
 
             </div>
 
-            <div class="section">
+            <div class="section habilidades-section">
 
                 <h4>Habilidades</h4>
 
-                <ul>
+                <div class="habilidades-grid">
 
                     {% for habilidad in habilidades %}
 
-                    <li>{{ habilidad.nombre }}</li>
+                    <div class="habilidad-item">
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>{{ habilidad.nombre }}</span>
+
+                    </div>
 
                     {% endfor %}
 
-                </ul>
+                </div>
 
             </div>
 
@@ -79,7 +86,7 @@ Mi CV
 
         <!-- COLUMNA DERECHA -->
 
-        <div class="col-lg-8 col-md-7 right-column">
+        <div class="col-lg-9 col-md-8 right-column">
 
             <div class="header-name">
 
@@ -89,7 +96,7 @@ Mi CV
 
             <div class="section">
 
-                <h3>Experiencia Laboral</h3>
+                <h3>EXPERIENCIA LABORAL</h3>
 
                 <div class="timeline">
 
@@ -97,17 +104,29 @@ Mi CV
 
                     <div class="timeline-item">
 
-                        <h5>{{ exp.cargo }}</h5>
+                        <h4 class="exp-role">{{ exp.cargo }}</h4>
 
-                        <p>{{ exp.empresa }} | {{ exp.fecha_inicio }} - {{ exp.fecha_fin }}</p>
+                        <div class="exp-meta">
+                            <strong>{{ exp.empresa }}</strong>
+                            <span>| {{ exp.fecha_inicio }} - {% if exp.fecha_fin %}
+                                {{ exp.fecha_fin }}
+                                {% else %}
+                                Actualidad
+                                {% endif %}</span>
+                        </div>
 
-                        <p>{{ exp.descripcion }}</p>
+                        <p class="exp-desc">
+                            {{ exp.descripcion }}
+                        </p>
 
-                        <ul>
+                        <ul class="exp-logros">
 
                             {% for logro in exp.logros.all %}
 
-                            <li>{{ logro.descripcion }}</li>
+                            <li>
+                                <i class="bi bi-circle-fill"></i>
+                                {{ logro.descripcion }}
+                            </li>
 
                             {% endfor %}
 
@@ -121,19 +140,31 @@ Mi CV
 
             </div>
 
-            <div class="section">
+            <div class="section education-section">
 
-                <h3>Educación</h3>
+                <h3>EDUCACIÓN SUPERIOR</h3>
 
                 {% for edu in educaciones %}
 
-                <p><strong>{{ edu.titulo }}</strong></p>
+                <div class="education-item">
 
-                <p>{{ edu.institucion }}</p>
+                    <div class="education-years">
+                        {{ edu.fecha_inicio }} - {{ edu.fecha_fin }}
+                    </div>
 
-                <p>{{ edu.fecha_inicio }} - {{ edu.fecha_fin }}</p>
+                    <div class="education-details">
 
-                <br>
+                        <div class="education-institution">
+                            {{ edu.institucion }}
+                        </div>
+
+                        <div class="education-title">
+                            {{ edu.titulo }}
+                        </div>
+
+                    </div>
+
+                </div>
 
                 {% endfor %}
 

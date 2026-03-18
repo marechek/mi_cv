@@ -4,11 +4,48 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 h5 {
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.header-name {
+    background: #244a7d;
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 35px 40px;
+
+    margin-left: -40px;
+    margin-right: -40px;
+
+    margin-top: -50px;
+    margin-bottom: 80px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    height: 200px;
+}
+
+.header-name h1 {
+    padding-top: 32px;
+    margin: 0;
+    font-size: 64px;
+    font-weight: 600;
 }
 
 .cv-container {
@@ -23,7 +60,43 @@ h5 {
 
 .right-column {
     background: white;
-    padding: 40px;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-column h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.right-column .section h3 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.right-column .section {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    z-index: 2;
+}
+
+.right-column .education-section {
+    margin-top: 90px;
+}
+
+.right-column::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background: #2f80ed;
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
+    z-index: 0;
 }
 
 .profile-img {
@@ -33,6 +106,10 @@ h5 {
     object-fit: cover;
     border: 4px solid white;
     margin-bottom: 20px;
+}
+
+.profile-section {
+    margin-bottom: 35px;
 }
 
 .profile-name {
@@ -47,38 +124,37 @@ h5 {
 }
 
 .section {
-    margin-top: 40px;
+    margin-top: 55px;
 }
 
 .section h4 {
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+    text-align: left;
 }
 
 .section p {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .section i {
     font-size: 16px;
 }
 
-.header-name {
-    background: #244a7d;
-    color: white;
-    padding: 45px;
-    margin-bottom: 40px;
+.section ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.header-name h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin: 0;
+.section ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .timeline {
@@ -94,8 +170,8 @@ h5 {
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -28px;
-    top: 5px;
+    left: -28.5px;
+    top: 3px;
     width: 14px;
     height: 14px;
     background: #2f80ed;
@@ -110,6 +186,22 @@ h5 {
     margin-bottom: 5px;
 }
 
+.timeline-item h4.exp-role {
+    font-size: 18px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.timeline-item h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    margin-bottom: 8px;
+}
+
 .progress {
     height: 18px;
     background: #e6e6e6;
@@ -120,4 +212,145 @@ h5 {
     width: var(--nivel);
     background: #2f80ed;
     border-radius: 10px;
+}
+
+.education-section {
+    margin-top: 80px;
+}
+
+.education-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 22px;
+    align-items: center;
+}
+
+.education-years {
+    width: 120px;
+    font-weight: 600;
+    color: #555;
+}
+
+.education-details {
+    flex: 1;
+}
+
+.education-institution {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.education-title {
+    color: #555;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 35px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.habilidad-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.habilidad-item span {
+    font-size: 14px;
+}
+
+.habilidad-item i {
+    color: #4da3ff;
+    font-size: 12px;
+}
+
+.habilidades-grid {
+    max-width: 420px;
+}
+
+.idiomas-list {
+    padding-left: 20px;
+}
+
+.idiomas-list li {
+    margin-bottom: 10px;
+}
+
+.idioma-nombre {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.idioma-nivel {
+    font-size: 14px;
+    color: #555;
+}
+
+.exp-role {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.exp-meta {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.exp-meta span {
+    color: #555;
+    margin-left: 5px;
+}
+
+.exp-desc {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+.exp-logros {
+    list-style: none;
+    padding-left: 0;
+}
+
+.exp-logros li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.exp-logros i {
+    color: #2f80ed;
+    font-size: 8px;
+    margin-top: 7px;
+}
+
+@media (max-width: 768px) {
+
+    .left-column {
+        text-align: center;
+    }
+
+    .profile-img {
+        margin: auto;
+    }
+
+    .header-name {
+        padding: 30px;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
