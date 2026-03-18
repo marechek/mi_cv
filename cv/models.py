@@ -11,7 +11,7 @@ class Profile(models.Model):
     telefono = models.CharField(max_length=50)
     website = models.URLField(blank=True)
 
-    foto = models.ImageField(upload_to="static/img", blank=True, null=True)
+    foto = models.ImageField(upload_to="profile/", blank=True, null=True)
 
     class Meta:
         verbose_name = "Perfil"

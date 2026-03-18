@@ -92,11 +92,29 @@ Mi CV
 
                 <h1>{{ profile.nombre }}</h1>
 
+                <div class="cv-nav">
+
+                    <a href="#resumen-profesional">Resumen Profesional</a>
+                    <a href="#experiencia-laboral">Experiencia Laboral</a>
+                    <a href="#educacion-superior">Educación Superior</a>
+
+                </div>
+
+            </div>
+
+            <div class="section resumen-section">
+
+                <h3 id="resumen-profesional">RESUMEN PROFESIONAL</h3>
+
+                <p class="resumen-texto">
+                    {{ profile.descripcion }}
+                </p>
+
             </div>
 
             <div class="section">
 
-                <h3>EXPERIENCIA LABORAL</h3>
+                <h3 id="experiencia-laboral">EXPERIENCIA LABORAL</h3>
 
                 <div class="timeline">
 
@@ -142,7 +160,7 @@ Mi CV
 
             <div class="section education-section">
 
-                <h3>EDUCACIÓN SUPERIOR</h3>
+                <h3 id="educacion-superior">EDUCACIÓN SUPERIOR</h3>
 
                 {% for edu in educaciones %}
 
